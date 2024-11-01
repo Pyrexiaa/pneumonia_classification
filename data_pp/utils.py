@@ -3,6 +3,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 import numpy as np
 import cv2
+from skimage.measure import label, regionprops
 
 def resize_image(image, target_size=(224, 224)):
     """
@@ -17,6 +18,8 @@ def resize_image(image, target_size=(224, 224)):
     """
 
     transform = transforms.Resize(target_size)
+    if isinstance(image, torch.Tensor):
+        image = transforms.ToPILImage()(image)
     return transform(image)
 
 def histogram_equalization(image):
@@ -35,10 +38,20 @@ def histogram_equalization(image):
         image = np.array(image.convert('L'))  # Convert to grayscale
     elif isinstance(image, torch.Tensor):
         image = image.numpy()
+
+    # Ensure the image is single-channel and np.uint8
+    if image.ndim == 3 and image.shape[0] == 1:  # If shape is (1, H, W)
+        image = image.squeeze(0)  # Remove the extra channel dimension
+    elif image.ndim == 3 and image.shape[-1] == 1:  # If shape is (H, W, 1)
+        image = image.squeeze(-1)
+
+    if image.dtype != np.uint8:
+        image = image.astype(np.uint8)
         
     equalized_image = cv2.equalizeHist(image)
-    equalized_tensor = torch.from_numpy(equalized_image).float().unsqueeze(0)  # Add channel dimension for grayscale
-    return equalized_tensor
+    equalized_pil_image = Image.fromarray(equalized_image)
+    # equalized_tensor = torch.from_numpy(equalized_image).float().unsqueeze(0)  # Add channel dimension for grayscale
+    return equalized_pil_image
 
 def gaussian_blur(image, kernel_size=(5, 5), sigma=0):
     """
@@ -92,6 +105,9 @@ def bilateral_filter(image, diameter=5, sigma_color=75, sigma_space=75):
     # If the image has a channel dimension (1, H, W), squeeze it to (H, W)
     if image.ndim == 3 and image.shape[0] == 1:
         image = np.squeeze(image, axis=0)
+
+    if image.dtype != np.uint8:
+        image = (255 * (image - image.min()) / (image.max() - image.min())).astype(np.uint8)
     
     # Apply bilateral filter using OpenCV
     filtered_image = cv2.bilateralFilter(image, diameter, sigma_color, sigma_space)
@@ -133,17 +149,33 @@ def adaptive_masking(image, closing_kernel_size=(5, 5)):
     # Step 3: Apply binary thresholding
     _, binary_mask = cv2.threshold(image, threshold_value, 255, cv2.THRESH_BINARY)
     
-    # Step 4: Apply morphological closing to smooth mask (remove small holes)
+    # Step 4: Label connected regions and keep only the largest region
+    labeled_mask = label(binary_mask)
+    regions = regionprops(labeled_mask)
+    if not regions:
+        print("No regions found in the binary mask.")
+        return torch.from_numpy(image).float().unsqueeze(0)
+    
+    # Identify the largest connected region
+    largest_region = max(regions, key=lambda r: r.area)
+    
+    # Create a mask with only the largest region filled
+    diaphragm_mask = np.zeros_like(binary_mask, dtype=np.uint8)
+    diaphragm_mask[labeled_mask == largest_region.label] = 255
+    
+    # Step 5: Fill any holes in the diaphragm region
+    diaphragm_mask = cv2.morphologyEx(diaphragm_mask, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
+    
+    # Step 6: Apply morphological closing to smooth mask (remove small holes)
     kernel = np.ones(closing_kernel_size, np.uint8)
-    closed_mask = cv2.morphologyEx(binary_mask, cv2.MORPH_CLOSE, kernel)
+    diaphragm_mask = cv2.morphologyEx(diaphragm_mask, cv2.MORPH_CLOSE, kernel)
     
-    # Step 5: Bitwise operation to remove diaphragm from the source image
-    result_image = cv2.bitwise_and(image, image, mask=closed_mask)
+    # Step 7: Bitwise operation to remove diaphragm from the source image
+    result_image = cv2.bitwise_and(image, image, mask=cv2.bitwise_not(diaphragm_mask))
+
+    equalized_pil_image = Image.fromarray(result_image)
     
-    # Convert back to a PyTorch tensor
-    result_tensor = torch.from_numpy(result_image).float().unsqueeze(0)  # Add back channel dimension for grayscale
-    
-    return result_tensor
+    return equalized_pil_image
 
 # It will segment the lung areas to isolate regions of interest, allowing you to focus on the lung lobes and filter out other structures.
 # This will return a mask that segments the lung from the rest of the image
@@ -163,11 +195,15 @@ def otsu_threshold(image):
     elif isinstance(image, torch.Tensor):
         # Convert to NumPy if the input is a tensor
         image = image.numpy()
-    
+
     # If the image has a channel dimension (1, H, W), squeeze it to (H, W)
     if image.ndim == 3 and image.shape[0] == 1:
         image = np.squeeze(image, axis=0)
     
+    # Ensure the image is in np.uint8 format for OpenCV compatibility
+    if image.dtype != np.uint8:
+        image = (image * 255).astype(np.uint8) if image.dtype == np.float32 else image.astype(np.uint8)
+
     # Apply Otsu's thresholding
     _, binary_image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     
