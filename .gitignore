@@ -1,2 +1,4 @@
 dataset/
 modified_dataset/
+*/__pycache__/
+*.pth
