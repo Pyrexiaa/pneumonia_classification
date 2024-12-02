@@ -1,0 +1,34 @@
+Model: DenseNet161 
+Preprocess: adaptive_masking_equalized
+Epoch: 20
+      
+
+======== Class to Index Mapping ========
+
+Test dataset size: 624
+
+ Index Class Name  Number of Samples
+     0   BACTERIA                242
+     1     NORMAL                234
+     2      VIRUS                148
+
+
+======== Classification Report ========
+
+              precision    recall  f1-score   support
+
+           0       0.71      0.94      0.81       242
+           1       0.95      0.65      0.77       234
+           2       0.55      0.54      0.55       148
+
+    accuracy                           0.74       624
+   macro avg       0.74      0.71      0.71       624
+weighted avg       0.76      0.74      0.73       624
+
+
+======== Metrics ========
+Accuracy           0.735577
+Balanced Accuracy  0.709377
+F1-Score           0.732709
+Precision          0.763080
+Recall             0.735577
