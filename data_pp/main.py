@@ -144,7 +144,8 @@ def preprocess_and_save_sample_images(root_dir, output_dir):
 def main(root_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     
-    splits = ['train', 'test', 'val']
+    # splits = ['train', 'test', 'val'] DO NOT AUGMENT THE TEST SET
+    splits = ['train', 'val']
     # If we want to do binary classification, can use the below class
     # classes = ['normal', 'pneumonia']
     classes = ['normal', 'bacteria', 'virus']
