@@ -27,6 +27,74 @@ https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 4. Creating the Final Dataset for Training
     - The main function in **main.py** saves all preprocessed images into a modified_dataset folder, which will be used for training. Each step is labeled as "first," "second," and "third" to guide the processing order. You can choose to run all steps sequentially at once if preferred.
 
+## Data Description
+### Dataset Overview
+The chest X-ray dataset containing a total of 5,856 X-ray images, structured into three main folders:
+- `train/`: Training dataset
+- `test/`: Testing dataset
+- `val/`: Validation dataset
+<br/>
+
+**Train:** 5,216 images<br/>
+**Test:** 624 images<br/>
+**Validation:** 16 images<br/>
+
+![TrainTestVal Distribution](README_images/TrainTestVal.png)
+
+<hr/>
+
+**Normal:** 1,583 images<br/>
+**Bacterial Pneumonia:** 2,780 images<br/>
+**Viral Pneumonia:** 1,493 images<br/>
+
+![MultiClassImage Distribution](README_images/Multiclass.png)
+
+### Dataset Modifications
+To ensure proper representation in the validation set, 8 viral pneumonia images were randomly selected from the training folder and moved to the validation folder. This modification was made to address the initial lack of viral pneumonia cases in the validation set.
+
+### Data Distribution
+#### Re-Categorised Dataset:
+![Training Set Distribution](README_images/TrainTestVal-R.png)
+
+#### Training Set (Total: 5,208 images)
+**Normal:** 1,341 images (25.7%)<br/>
+**Bacterial Pneumonia:** 2,530 images (48.6%)<br/>
+**Viral Pneumonia:** 1,337 images (25.7%)<br/>
+
+![Training Set Distribution](README_images/MulticlassTrain2.png)
+
+#### Testing Set (Total: 624 images)
+**Normal:** 234 images (37.5%)<br/>
+**Bacterial Pneumonia:** 242 images (38.8%)<br/>
+**Viral Pneumonia:** 148 images (23.7%)<br/>
+
+![Testing Set Distribution](README_images/MulticlassTest.png)
+
+#### Validation Set (Total: 24 images)
+**Normal:** 8 images (33.3%)<br/>
+**Bacterial Pneumonia:** 8 images (33.3%)<br/>
+**Viral Pneumonia:** 8 images (33.3%)<br/>
+
+![Validation Set Distribution](README_images/MulticlassValid2.png)
+
+
+### Directory Structure
+```
+Original Dataset/               Current Dataset/
+├── train/                      ├── train/
+│   ├── NORMAL/                 │   ├── NORMAL/
+│   └── PNEUMONIA/              │   ├── BACTERIA/
+├── test/                       │   └── VIRUS/
+│   ├── NORMAL/                 ├── test/
+│   └── PNEUMONIA/              │   ├── NORMAL/
+└── val/                        │   ├── BACTERIA/
+    ├── NORMAL/                 │   └── VIRUS/
+    └── PNEUMONIA/              └── val/
+                                   ├── NORMAL/
+                                   ├── BACTERIA/
+                                   └── VIRUS/
+```
+
 ## Reference:
 - Pre-processing Methods in Chest X-Ray Image Classification: https://pmc.ncbi.nlm.nih.gov/articles/PMC8982897/pdf/pone.0265949.pdf
 - Chest X-Ray Image Preprocessing for Disease Classification: https://www.sciencedirect.com/science/article/pii/S1877050921015556
