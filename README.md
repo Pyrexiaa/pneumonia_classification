@@ -39,7 +39,7 @@ The chest X-ray dataset containing a total of 5,856 X-ray images, structured int
 **Test:** 624 images<br/>
 **Validation:** 16 images<br/>
 
-![TrainTestVal Distribution](README_images/TrainTestVal.png)
+![TrainTestVal Distribution](data_visualization/TrainTestVal.png)
 
 <hr/>
 
@@ -47,35 +47,35 @@ The chest X-ray dataset containing a total of 5,856 X-ray images, structured int
 **Bacterial Pneumonia:** 2,780 images<br/>
 **Viral Pneumonia:** 1,493 images<br/>
 
-![MultiClassImage Distribution](README_images/Multiclass.png)
+![MultiClassImage Distribution](data_visualization/Multiclass.png)
 
 ### Dataset Modifications
 To ensure proper representation in the validation set, 200 viral pneumonia images were randomly selected from the training folder and moved to the validation folder. This modification was made to address the initial lack of viral pneumonia cases in the validation set. 192 normal images and 192 bacterial pneumonia images were randomly selected from the training folder and added to the validation set. This ensures that our validation set now has 200 images each for normal, bacterial pneumonia, and viral pneumonia cases, making it more balanced and representative.
 
 ### Data Distribution
 #### Re-Categorised Dataset:
-![Training Set Distribution](README_images/TrainTestVal-R.png)
+![Training Set Distribution](data_visualization/TrainTestVal-R.png)
 
 #### Training Set (Total: 5,208 images)
 **Normal:** 1,149 images (24.8.7%)<br/>
 **Bacterial Pneumonia:** 2,338 images (50.5%)<br/>
 **Viral Pneumonia:** 1,145 images (24.7%)<br/>
 
-![Training Set Distribution](README_images/MulticlassTrain2.png)
+![Training Set Distribution](data_visualization/MulticlassTrain2.png)
 
 #### Testing Set (Total: 624 images)
 **Normal:** 234 images (37.5%)<br/>
 **Bacterial Pneumonia:** 242 images (38.8%)<br/>
 **Viral Pneumonia:** 148 images (23.7%)<br/>
 
-![Testing Set Distribution](README_images/MulticlassTest.png)
+![Testing Set Distribution](data_visualization/MulticlassTest.png)
 
 #### Validation Set (Total: 24 images)
 **Normal:** 8 images (33.3%)<br/>
 **Bacterial Pneumonia:** 8 images (33.3%)<br/>
 **Viral Pneumonia:** 8 images (33.3%)<br/>
 
-![Validation Set Distribution](README_images/MulticlassValid2.png)
+![Validation Set Distribution](data_visualization/MulticlassValid2.png)
 
 
 ### Directory Structure
