@@ -50,7 +50,7 @@ The chest X-ray dataset containing a total of 5,856 X-ray images, structured int
 ![MultiClassImage Distribution](README_images/Multiclass.png)
 
 ### Dataset Modifications
-To ensure proper representation in the validation set, 8 viral pneumonia images were randomly selected from the training folder and moved to the validation folder. This modification was made to address the initial lack of viral pneumonia cases in the validation set.
+To ensure proper representation in the validation set, 200 viral pneumonia images were randomly selected from the training folder and moved to the validation folder. This modification was made to address the initial lack of viral pneumonia cases in the validation set. 192 normal images and 192 bacterial pneumonia images were randomly selected from the training folder and added to the validation set. This ensures that our validation set now has 200 images each for normal, bacterial pneumonia, and viral pneumonia cases, making it more balanced and representative.
 
 ### Data Distribution
 #### Re-Categorised Dataset:
