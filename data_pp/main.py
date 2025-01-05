@@ -77,14 +77,18 @@ def segregate_pneumonia_images(root_dir, output_dir):
             shutil.copy(source_path, target_path)
             print(f"Copied {image_file} to {target_path}")
 
-    # Randomly move 300 images from the train/virus folder to the val/virus folder
+    # Randomly move 200 images from the train/virus folder to the val/virus folder
     train_virus_folder = os.path.join(output_dir, "train", "VIRUS")
     val_virus_folder = os.path.join(output_dir, "val", "VIRUS")
     os.makedirs(val_virus_folder, exist_ok=True)
 
-    # Randomly move 292 images from the train/virus folder to the val/bacteria folder
+    # Randomly move 192 images from the train/bacteria folder to the val/bacteria folder
     train_bacteria_folder = os.path.join(output_dir, "train", "BACTERIA")
     val_bacteria_folder = os.path.join(output_dir, "val", "BACTERIA")
+
+    # Randomly move 192 images from the train/normal folder to the val/normal folder
+    train_normal_folder = os.path.join(output_dir, "train", "NORMAL")
+    val_normal_folder = os.path.join(output_dir, "val", "NORMAL")
 
     # Get all virus images in the train/virus folder
     virus_images = [
@@ -99,11 +103,21 @@ def segregate_pneumonia_images(root_dir, output_dir):
         if f.lower().endswith((".png", ".jpg", ".jpeg"))
     ]
 
-    # Randomly select 300 virus images from training dataset
-    selected_virus_images = random.sample(virus_images, min(300, len(virus_images)))
-    # Randomly select 292 bacterial images from training dataset
+    normal_images = [
+        f
+        for f in os.listdir(train_normal_folder)
+        if f.lower().endswith((".png", ".jpg", ".jpeg"))
+    ]
+
+    # Randomly select 200 virus images from training dataset
+    selected_virus_images = random.sample(virus_images, min(200, len(virus_images)))
+    # Randomly select 192 bacterial images from training dataset
     selected_bacteria_images = random.sample(
-        bacteria_images, min(292, len(bacteria_images))
+        bacteria_images, min(192, len(bacteria_images))
+    )
+    # Randomly select 192 normal images from training dataset
+    selected_normal_images = random.sample(
+        normal_images, min(192, len(normal_images))
     )
 
     for image_file in selected_virus_images:
@@ -122,6 +136,16 @@ def segregate_pneumonia_images(root_dir, output_dir):
         shutil.move(source_path, target_path)
         print(
             f"Moved {image_file} from {train_bacteria_folder} to {val_bacteria_folder}"
+        )
+
+    for image_file in selected_normal_images:
+        source_path = os.path.join(train_normal_folder, image_file)
+        target_path = os.path.join(val_normal_folder, image_file)
+
+        # Move the selected image to the val/virus folder
+        shutil.move(source_path, target_path)
+        print(
+            f"Moved {image_file} from {train_normal_folder} to {val_normal_folder}"
         )
 
 
