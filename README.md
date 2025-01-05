@@ -57,9 +57,9 @@ To ensure proper representation in the validation set, 200 viral pneumonia image
 ![Training Set Distribution](README_images/TrainTestVal-R.png)
 
 #### Training Set (Total: 5,208 images)
-**Normal:** 1,341 images (25.7%)<br/>
-**Bacterial Pneumonia:** 2,530 images (48.6%)<br/>
-**Viral Pneumonia:** 1,337 images (25.7%)<br/>
+**Normal:** 1,149 images (24.8.7%)<br/>
+**Bacterial Pneumonia:** 2,338 images (50.5%)<br/>
+**Viral Pneumonia:** 1,145 images (24.7%)<br/>
 
 ![Training Set Distribution](README_images/MulticlassTrain2.png)
 
