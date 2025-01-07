@@ -1,0 +1,688 @@
+
+=========================
+DenseNet161
+=========================
+
+===== baseline =====
+Epoch 1/20
+Train Loss: 0.6892 - Train Acc: 0.7578
+Validation Loss: 0.7664 - Validation Acc: 0.7067
+
+Epoch 2/20
+Train Loss: 0.4634 - Train Acc: 0.8001
+Validation Loss: 0.5021 - Validation Acc: 0.7900
+
+Epoch 3/20
+Train Loss: 0.4383 - Train Acc: 0.8096
+Validation Loss: 0.5915 - Validation Acc: 0.7467
+
+Epoch 4/20
+Train Loss: 0.4173 - Train Acc: 0.8189
+Validation Loss: 0.8039 - Validation Acc: 0.6167
+
+Epoch 5/20
+Train Loss: 0.4009 - Train Acc: 0.8180
+Validation Loss: 0.4531 - Validation Acc: 0.8267
+
+Epoch 6/20
+Train Loss: 0.3717 - Train Acc: 0.8392
+Validation Loss: 0.3844 - Validation Acc: 0.8267
+
+Epoch 7/20
+Train Loss: 0.3577 - Train Acc: 0.8405
+Validation Loss: 0.4096 - Validation Acc: 0.8150
+
+Epoch 8/20
+Train Loss: 0.3501 - Train Acc: 0.8452
+Validation Loss: 0.3897 - Validation Acc: 0.8283
+
+Epoch 9/20
+Train Loss: 0.3316 - Train Acc: 0.8573
+Validation Loss: 0.7351 - Validation Acc: 0.7500
+
+Epoch 10/20
+Train Loss: 0.3167 - Train Acc: 0.8636
+Validation Loss: 0.5776 - Validation Acc: 0.7933
+
+Epoch 11/20
+Train Loss: 0.3120 - Train Acc: 0.8627
+Validation Loss: 0.4503 - Validation Acc: 0.8233
+
+Epoch 12/20
+Train Loss: 0.2594 - Train Acc: 0.8905
+Validation Loss: 0.5194 - Validation Acc: 0.7900
+
+Epoch 13/20
+Train Loss: 0.2583 - Train Acc: 0.8910
+Validation Loss: 0.4231 - Validation Acc: 0.8100
+
+Epoch 14/20
+Train Loss: 0.2098 - Train Acc: 0.9126
+Validation Loss: 0.6743 - Validation Acc: 0.7417
+
+Epoch 15/20
+Train Loss: 0.1997 - Train Acc: 0.9175
+Validation Loss: 0.4728 - Validation Acc: 0.7983
+
+Epoch 16/20
+Train Loss: 0.1619 - Train Acc: 0.9354
+Validation Loss: 0.7836 - Validation Acc: 0.7600
+
+Epoch 17/20
+Train Loss: 0.1505 - Train Acc: 0.9365
+Validation Loss: 0.6707 - Validation Acc: 0.7933
+
+Epoch 18/20
+Train Loss: 0.1364 - Train Acc: 0.9430
+Validation Loss: 0.7999 - Validation Acc: 0.7717
+
+Epoch 19/20
+Train Loss: 0.1196 - Train Acc: 0.9570
+Validation Loss: 0.6695 - Validation Acc: 0.8067
+
+Epoch 20/20
+Train Loss: 0.0852 - Train Acc: 0.9652
+Validation Loss: 0.7426 - Validation Acc: 0.8233
+
+Test Accuracy: 0.657051282051282
+
+
+
+===== histogram_equalization =====
+Epoch 1/20
+Train Loss: 0.2056 - Train Acc: 0.9206
+Validation Loss: 0.7359 - Validation Acc: 0.7650
+
+Epoch 2/20
+Train Loss: 0.1204 - Train Acc: 0.9519
+Validation Loss: 0.6233 - Validation Acc: 0.8167
+
+Epoch 3/20
+Train Loss: 0.1107 - Train Acc: 0.9568
+Validation Loss: 0.9103 - Validation Acc: 0.7633
+
+Epoch 4/20
+Train Loss: 0.0768 - Train Acc: 0.9724
+Validation Loss: 0.7507 - Validation Acc: 0.8100
+
+Epoch 5/20
+Train Loss: 0.1025 - Train Acc: 0.9611
+Validation Loss: 1.1359 - Validation Acc: 0.7117
+
+Epoch 6/20
+Train Loss: 0.0585 - Train Acc: 0.9773
+Validation Loss: 1.0233 - Validation Acc: 0.8167
+
+Epoch 7/20
+Train Loss: 0.0521 - Train Acc: 0.9808
+Validation Loss: 0.6942 - Validation Acc: 0.8400
+
+Epoch 8/20
+Train Loss: 0.0483 - Train Acc: 0.9829
+Validation Loss: 0.9670 - Validation Acc: 0.8300
+
+Epoch 9/20
+Train Loss: 0.0969 - Train Acc: 0.9639
+Validation Loss: 0.6411 - Validation Acc: 0.8333
+
+Epoch 10/20
+Train Loss: 0.0469 - Train Acc: 0.9836
+Validation Loss: 1.4442 - Validation Acc: 0.7550
+
+Epoch 11/20
+Train Loss: 0.0434 - Train Acc: 0.9825
+Validation Loss: 1.2257 - Validation Acc: 0.7917
+
+Epoch 12/20
+Train Loss: 0.0508 - Train Acc: 0.9816
+Validation Loss: 0.7769 - Validation Acc: 0.8317
+
+Epoch 13/20
+Train Loss: 0.0326 - Train Acc: 0.9875
+Validation Loss: 0.8756 - Validation Acc: 0.8333
+
+Epoch 14/20
+Train Loss: 0.0563 - Train Acc: 0.9806
+Validation Loss: 0.7402 - Validation Acc: 0.8133
+
+Epoch 15/20
+Train Loss: 0.0669 - Train Acc: 0.9758
+Validation Loss: 0.7869 - Validation Acc: 0.8150
+
+Epoch 16/20
+Train Loss: 0.0485 - Train Acc: 0.9823
+Validation Loss: 0.7918 - Validation Acc: 0.8433
+
+Epoch 17/20
+Train Loss: 0.0267 - Train Acc: 0.9903
+Validation Loss: 1.6460 - Validation Acc: 0.7633
+
+Epoch 18/20
+Train Loss: 0.0236 - Train Acc: 0.9927
+Validation Loss: 1.1676 - Validation Acc: 0.8133
+
+Epoch 19/20
+Train Loss: 0.0202 - Train Acc: 0.9920
+Validation Loss: 0.9294 - Validation Acc: 0.8250
+
+Epoch 20/20
+Train Loss: 0.0452 - Train Acc: 0.9825
+Validation Loss: 1.6895 - Validation Acc: 0.7367
+
+Test Accuracy: 0.6858974358974359
+
+
+
+===== gaussian_blur =====
+Epoch 1/20
+Train Loss: 0.0820 - Train Acc: 0.9702
+Validation Loss: 1.1385 - Validation Acc: 0.8250
+
+Epoch 2/20
+Train Loss: 0.0439 - Train Acc: 0.9855
+Validation Loss: 0.9604 - Validation Acc: 0.8283
+
+Epoch 3/20
+Train Loss: 0.0340 - Train Acc: 0.9875
+Validation Loss: 0.9512 - Validation Acc: 0.7883
+
+Epoch 4/20
+Train Loss: 0.0437 - Train Acc: 0.9836
+Validation Loss: 1.1793 - Validation Acc: 0.8000
+
+Epoch 5/20
+Train Loss: 0.0424 - Train Acc: 0.9849
+Validation Loss: 0.9754 - Validation Acc: 0.7983
+
+Epoch 6/20
+Train Loss: 0.0410 - Train Acc: 0.9849
+Validation Loss: 0.8303 - Validation Acc: 0.8133
+
+Epoch 7/20
+Train Loss: 0.0491 - Train Acc: 0.9834
+Validation Loss: 0.9043 - Validation Acc: 0.8067
+
+Epoch 8/20
+Train Loss: 0.0462 - Train Acc: 0.9851
+Validation Loss: 1.3484 - Validation Acc: 0.7950
+
+Epoch 9/20
+Train Loss: 0.0356 - Train Acc: 0.9877
+Validation Loss: 0.8420 - Validation Acc: 0.8217
+
+Epoch 10/20
+Train Loss: 0.0499 - Train Acc: 0.9819
+Validation Loss: 1.1672 - Validation Acc: 0.8183
+
+Epoch 11/20
+Train Loss: 0.0264 - Train Acc: 0.9918
+Validation Loss: 1.1811 - Validation Acc: 0.8283
+
+Epoch 12/20
+Train Loss: 0.0198 - Train Acc: 0.9905
+Validation Loss: 0.9824 - Validation Acc: 0.8383
+
+Epoch 13/20
+Train Loss: 0.0159 - Train Acc: 0.9950
+Validation Loss: 1.0218 - Validation Acc: 0.8217
+
+Epoch 14/20
+Train Loss: 0.0112 - Train Acc: 0.9961
+Validation Loss: 1.0622 - Validation Acc: 0.8267
+
+Epoch 15/20
+Train Loss: 0.0136 - Train Acc: 0.9953
+Validation Loss: 0.9985 - Validation Acc: 0.8383
+
+Epoch 16/20
+Train Loss: 0.0260 - Train Acc: 0.9918
+Validation Loss: 0.8251 - Validation Acc: 0.8017
+
+Epoch 17/20
+Train Loss: 0.0572 - Train Acc: 0.9821
+Validation Loss: 0.8303 - Validation Acc: 0.8333
+
+Epoch 18/20
+Train Loss: 0.0240 - Train Acc: 0.9911
+Validation Loss: 0.9694 - Validation Acc: 0.8300
+
+Epoch 19/20
+Train Loss: 0.0121 - Train Acc: 0.9957
+Validation Loss: 1.0610 - Validation Acc: 0.8317
+
+Epoch 20/20
+Train Loss: 0.0104 - Train Acc: 0.9972
+Validation Loss: 1.1526 - Validation Acc: 0.8350
+
+Test Accuracy: 0.7003205128205128
+
+
+
+===== bilateral_filer =====
+Epoch 1/20
+Train Loss: 0.0382 - Train Acc: 0.9866
+Validation Loss: 1.1490 - Validation Acc: 0.8300
+
+Epoch 2/20
+Train Loss: 0.0418 - Train Acc: 0.9855
+Validation Loss: 1.3242 - Validation Acc: 0.8067
+
+Epoch 3/20
+Train Loss: 0.0151 - Train Acc: 0.9953
+Validation Loss: 1.0218 - Validation Acc: 0.8350
+
+Epoch 4/20
+Train Loss: 0.0440 - Train Acc: 0.9877
+Validation Loss: 0.8983 - Validation Acc: 0.8200
+
+Epoch 5/20
+Train Loss: 0.0355 - Train Acc: 0.9866
+Validation Loss: 0.9160 - Validation Acc: 0.8417
+
+Epoch 6/20
+Train Loss: 0.0107 - Train Acc: 0.9959
+Validation Loss: 1.1585 - Validation Acc: 0.8217
+
+Epoch 7/20
+Train Loss: 0.0077 - Train Acc: 0.9981
+Validation Loss: 1.1649 - Validation Acc: 0.8300
+
+Epoch 8/20
+Train Loss: 0.0071 - Train Acc: 0.9985
+Validation Loss: 1.2057 - Validation Acc: 0.8233
+
+Epoch 9/20
+Train Loss: 0.0128 - Train Acc: 0.9957
+Validation Loss: 1.3021 - Validation Acc: 0.7900
+
+Epoch 10/20
+Train Loss: 0.0705 - Train Acc: 0.9758
+Validation Loss: 1.4536 - Validation Acc: 0.7833
+
+Epoch 11/20
+Train Loss: 0.0149 - Train Acc: 0.9940
+Validation Loss: 0.9650 - Validation Acc: 0.8317
+
+Epoch 12/20
+Train Loss: 0.0128 - Train Acc: 0.9955
+Validation Loss: 1.0778 - Validation Acc: 0.8050
+
+Epoch 13/20
+Train Loss: 0.0053 - Train Acc: 0.9985
+Validation Loss: 1.3367 - Validation Acc: 0.8133
+
+Epoch 14/20
+Train Loss: 0.0101 - Train Acc: 0.9968
+Validation Loss: 1.0734 - Validation Acc: 0.8183
+
+Epoch 15/20
+Train Loss: 0.0377 - Train Acc: 0.9868
+Validation Loss: 0.9769 - Validation Acc: 0.8133
+
+Epoch 16/20
+Train Loss: 0.0630 - Train Acc: 0.9760
+Validation Loss: 1.0399 - Validation Acc: 0.8117
+
+Epoch 17/20
+Train Loss: 0.0302 - Train Acc: 0.9875
+Validation Loss: 1.1879 - Validation Acc: 0.8117
+
+Epoch 18/20
+Train Loss: 0.0144 - Train Acc: 0.9953
+Validation Loss: 1.0432 - Validation Acc: 0.7983
+
+Epoch 19/20
+Train Loss: 0.0099 - Train Acc: 0.9965
+Validation Loss: 1.1341 - Validation Acc: 0.8233
+
+Epoch 20/20
+Train Loss: 0.0118 - Train Acc: 0.9955
+Validation Loss: 1.1273 - Validation Acc: 0.8300
+
+Test Accuracy: 0.7259615384615384
+
+
+
+===== adaptive_masking =====
+Epoch 1/20
+Train Loss: 0.0698 - Train Acc: 0.9756
+Validation Loss: 0.8795 - Validation Acc: 0.8200
+
+Epoch 2/20
+Train Loss: 0.0157 - Train Acc: 0.9948
+Validation Loss: 1.1983 - Validation Acc: 0.8250
+
+Epoch 3/20
+Train Loss: 0.0158 - Train Acc: 0.9950
+Validation Loss: 1.0002 - Validation Acc: 0.8333
+
+Epoch 4/20
+Train Loss: 0.0237 - Train Acc: 0.9920
+Validation Loss: 1.1234 - Validation Acc: 0.8333
+
+Epoch 5/20
+Train Loss: 0.0254 - Train Acc: 0.9905
+Validation Loss: 1.2976 - Validation Acc: 0.8050
+
+Epoch 6/20
+Train Loss: 0.0400 - Train Acc: 0.9875
+Validation Loss: 1.1857 - Validation Acc: 0.7950
+
+Epoch 7/20
+Train Loss: 0.0267 - Train Acc: 0.9909
+Validation Loss: 1.3524 - Validation Acc: 0.7767
+
+Epoch 8/20
+Train Loss: 0.0179 - Train Acc: 0.9942
+Validation Loss: 1.2640 - Validation Acc: 0.8067
+
+Epoch 9/20
+Train Loss: 0.0074 - Train Acc: 0.9976
+Validation Loss: 1.1705 - Validation Acc: 0.8300
+
+Epoch 10/20
+Train Loss: 0.0094 - Train Acc: 0.9968
+Validation Loss: 1.6711 - Validation Acc: 0.7300
+
+Epoch 11/20
+Train Loss: 0.0059 - Train Acc: 0.9978
+Validation Loss: 1.3337 - Validation Acc: 0.8250
+
+Epoch 12/20
+Train Loss: 0.0066 - Train Acc: 0.9976
+Validation Loss: 1.1625 - Validation Acc: 0.8383
+
+Epoch 13/20
+Train Loss: 0.0727 - Train Acc: 0.9747
+Validation Loss: 1.2895 - Validation Acc: 0.7617
+
+Epoch 14/20
+Train Loss: 0.0348 - Train Acc: 0.9877
+Validation Loss: 1.1537 - Validation Acc: 0.8317
+
+Epoch 15/20
+Train Loss: 0.0107 - Train Acc: 0.9970
+Validation Loss: 1.1093 - Validation Acc: 0.8117
+
+Epoch 16/20
+Train Loss: 0.0079 - Train Acc: 0.9974
+Validation Loss: 1.2650 - Validation Acc: 0.8133
+
+Epoch 17/20
+Train Loss: 0.0245 - Train Acc: 0.9927
+Validation Loss: 1.2832 - Validation Acc: 0.8333
+
+Epoch 18/20
+Train Loss: 0.0172 - Train Acc: 0.9942
+Validation Loss: 1.1603 - Validation Acc: 0.8267
+
+Epoch 19/20
+Train Loss: 0.0208 - Train Acc: 0.9929
+Validation Loss: 1.3863 - Validation Acc: 0.8167
+
+Epoch 20/20
+Train Loss: 0.0110 - Train Acc: 0.9959
+Validation Loss: 1.2636 - Validation Acc: 0.8433
+
+Test Accuracy: 0.6858974358974359
+
+
+
+===== adaptive_masking_equalized =====
+Epoch 1/20
+Train Loss: 0.0263 - Train Acc: 0.9909
+Validation Loss: 1.2321 - Validation Acc: 0.8367
+
+Epoch 2/20
+Train Loss: 0.0174 - Train Acc: 0.9937
+Validation Loss: 0.9885 - Validation Acc: 0.8450
+
+Epoch 3/20
+Train Loss: 0.0099 - Train Acc: 0.9959
+Validation Loss: 1.0677 - Validation Acc: 0.8367
+
+Epoch 4/20
+Train Loss: 0.0032 - Train Acc: 0.9994
+Validation Loss: 1.3101 - Validation Acc: 0.8183
+
+Epoch 5/20
+Train Loss: 0.0122 - Train Acc: 0.9959
+Validation Loss: 1.5444 - Validation Acc: 0.7933
+
+Epoch 6/20
+Train Loss: 0.0700 - Train Acc: 0.9801
+Validation Loss: 1.1307 - Validation Acc: 0.8167
+
+Epoch 7/20
+Train Loss: 0.0100 - Train Acc: 0.9968
+Validation Loss: 1.0692 - Validation Acc: 0.8100
+
+Epoch 8/20
+Train Loss: 0.0025 - Train Acc: 0.9994
+Validation Loss: 1.1489 - Validation Acc: 0.8250
+
+Epoch 9/20
+Train Loss: 0.0023 - Train Acc: 0.9994
+Validation Loss: 1.0747 - Validation Acc: 0.8350
+
+Epoch 10/20
+Train Loss: 0.0022 - Train Acc: 0.9996
+Validation Loss: 1.6042 - Validation Acc: 0.8033
+
+Epoch 11/20
+Train Loss: 0.0009 - Train Acc: 0.9998
+Validation Loss: 1.3020 - Validation Acc: 0.8300
+
+Epoch 12/20
+Train Loss: 0.0011 - Train Acc: 0.9998
+Validation Loss: 1.3401 - Validation Acc: 0.8333
+
+Epoch 13/20
+Train Loss: 0.0003 - Train Acc: 1.0000
+Validation Loss: 1.4007 - Validation Acc: 0.8233
+
+Epoch 14/20
+Train Loss: 0.0002 - Train Acc: 1.0000
+Validation Loss: 1.3441 - Validation Acc: 0.8267
+
+Epoch 15/20
+Train Loss: 0.0002 - Train Acc: 1.0000
+Validation Loss: 1.5222 - Validation Acc: 0.8283
+
+Epoch 16/20
+Train Loss: 0.0001 - Train Acc: 1.0000
+Validation Loss: 1.4366 - Validation Acc: 0.8317
+
+Epoch 17/20
+Train Loss: 0.0001 - Train Acc: 1.0000
+Validation Loss: 1.3610 - Validation Acc: 0.8300
+
+Epoch 18/20
+Train Loss: 0.0457 - Train Acc: 0.9853
+Validation Loss: 1.4671 - Validation Acc: 0.7783
+
+Epoch 19/20
+Train Loss: 0.1369 - Train Acc: 0.9521
+Validation Loss: 0.7885 - Validation Acc: 0.8300
+
+Epoch 20/20
+Train Loss: 0.0127 - Train Acc: 0.9957
+Validation Loss: 1.0489 - Validation Acc: 0.8200
+
+Test Accuracy: 0.7147435897435898
+
+
+
+===== adaptive_masking_gaussian =====
+Epoch 1/20
+Train Loss: 0.0176 - Train Acc: 0.9944
+Validation Loss: 1.0970 - Validation Acc: 0.8150
+
+Epoch 2/20
+Train Loss: 0.0242 - Train Acc: 0.9911
+Validation Loss: 1.2602 - Validation Acc: 0.8183
+
+Epoch 3/20
+Train Loss: 0.0099 - Train Acc: 0.9970
+Validation Loss: 1.1239 - Validation Acc: 0.8233
+
+Epoch 4/20
+Train Loss: 0.0207 - Train Acc: 0.9935
+Validation Loss: 1.2879 - Validation Acc: 0.8083
+
+Epoch 5/20
+Train Loss: 0.0144 - Train Acc: 0.9948
+Validation Loss: 1.2572 - Validation Acc: 0.8167
+
+Epoch 6/20
+Train Loss: 0.0207 - Train Acc: 0.9914
+Validation Loss: 1.3044 - Validation Acc: 0.7833
+
+Epoch 7/20
+Train Loss: 0.0228 - Train Acc: 0.9914
+Validation Loss: 1.6500 - Validation Acc: 0.7783
+
+Epoch 8/20
+Train Loss: 0.0137 - Train Acc: 0.9953
+Validation Loss: 1.3449 - Validation Acc: 0.8100
+
+Epoch 9/20
+Train Loss: 0.0040 - Train Acc: 0.9989
+Validation Loss: 1.6522 - Validation Acc: 0.7917
+
+Epoch 10/20
+Train Loss: 0.0383 - Train Acc: 0.9899
+Validation Loss: 1.2468 - Validation Acc: 0.8033
+
+Epoch 11/20
+Train Loss: 0.0440 - Train Acc: 0.9836
+Validation Loss: 1.0720 - Validation Acc: 0.8083
+
+Epoch 12/20
+Train Loss: 0.0062 - Train Acc: 0.9978
+Validation Loss: 1.1772 - Validation Acc: 0.8033
+
+Epoch 13/20
+Train Loss: 0.0021 - Train Acc: 0.9996
+Validation Loss: 1.0711 - Validation Acc: 0.8283
+
+Epoch 14/20
+Train Loss: 0.0010 - Train Acc: 0.9998
+Validation Loss: 1.0845 - Validation Acc: 0.8300
+
+Epoch 15/20
+Train Loss: 0.0003 - Train Acc: 1.0000
+Validation Loss: 1.1240 - Validation Acc: 0.8367
+
+Epoch 16/20
+Train Loss: 0.0004 - Train Acc: 1.0000
+Validation Loss: 1.1772 - Validation Acc: 0.8233
+
+Epoch 17/20
+Train Loss: 0.0003 - Train Acc: 1.0000
+Validation Loss: 1.1930 - Validation Acc: 0.8300
+
+Epoch 18/20
+Train Loss: 0.0001 - Train Acc: 1.0000
+Validation Loss: 1.2384 - Validation Acc: 0.8267
+
+Epoch 19/20
+Train Loss: 0.0001 - Train Acc: 1.0000
+Validation Loss: 1.2013 - Validation Acc: 0.8283
+
+Epoch 20/20
+Train Loss: 0.0001 - Train Acc: 1.0000
+Validation Loss: 1.2378 - Validation Acc: 0.8317
+
+Test Accuracy: 0.7211538461538461
+
+
+
+===== adaptive_masking_bilateral =====
+Epoch 1/20
+Train Loss: 0.0194 - Train Acc: 0.9942
+Validation Loss: 1.7622 - Validation Acc: 0.8050
+
+Epoch 2/20
+Train Loss: 0.0201 - Train Acc: 0.9933
+Validation Loss: 1.6954 - Validation Acc: 0.7783
+
+Epoch 3/20
+Train Loss: 0.0069 - Train Acc: 0.9970
+Validation Loss: 1.4237 - Validation Acc: 0.8283
+
+Epoch 4/20
+Train Loss: 0.0081 - Train Acc: 0.9968
+Validation Loss: 1.3353 - Validation Acc: 0.8317
+
+Epoch 5/20
+Train Loss: 0.0053 - Train Acc: 0.9978
+Validation Loss: 1.2612 - Validation Acc: 0.8433
+
+Epoch 6/20
+Train Loss: 0.0015 - Train Acc: 0.9996
+Validation Loss: 1.3509 - Validation Acc: 0.8117
+
+Epoch 7/20
+Train Loss: 0.0023 - Train Acc: 0.9994
+Validation Loss: 1.5307 - Validation Acc: 0.8317
+
+Epoch 8/20
+Train Loss: 0.0048 - Train Acc: 0.9981
+Validation Loss: 1.8917 - Validation Acc: 0.8000
+
+Epoch 9/20
+Train Loss: 0.0211 - Train Acc: 0.9940
+Validation Loss: 1.2761 - Validation Acc: 0.7900
+
+Epoch 10/20
+Train Loss: 0.0603 - Train Acc: 0.9814
+Validation Loss: 1.2782 - Validation Acc: 0.7900
+
+Epoch 11/20
+Train Loss: 0.0227 - Train Acc: 0.9914
+Validation Loss: 1.3097 - Validation Acc: 0.8000
+
+Epoch 12/20
+Train Loss: 0.0073 - Train Acc: 0.9981
+Validation Loss: 1.1407 - Validation Acc: 0.8233
+
+Epoch 13/20
+Train Loss: 0.0070 - Train Acc: 0.9978
+Validation Loss: 1.3207 - Validation Acc: 0.7967
+
+Epoch 14/20
+Train Loss: 0.0036 - Train Acc: 0.9991
+Validation Loss: 1.3235 - Validation Acc: 0.8067
+
+Epoch 15/20
+Train Loss: 0.0008 - Train Acc: 1.0000
+Validation Loss: 1.2327 - Validation Acc: 0.8233
+
+Epoch 16/20
+Train Loss: 0.0002 - Train Acc: 1.0000
+Validation Loss: 1.1778 - Validation Acc: 0.8317
+
+Epoch 17/20
+Train Loss: 0.0002 - Train Acc: 1.0000
+Validation Loss: 1.2390 - Validation Acc: 0.8283
+
+Epoch 18/20
+Train Loss: 0.0003 - Train Acc: 1.0000
+Validation Loss: 1.2430 - Validation Acc: 0.8267
+
+Epoch 19/20
+Train Loss: 0.0002 - Train Acc: 1.0000
+Validation Loss: 1.3413 - Validation Acc: 0.8217
+
+Epoch 20/20
+Train Loss: 0.0002 - Train Acc: 1.0000
+Validation Loss: 1.3361 - Validation Acc: 0.8267
+
+Test Accuracy: 0.7371794871794872
+
+
+
+ Empty DataFrame
+Columns: []
+Index: []
