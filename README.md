@@ -71,9 +71,9 @@ To ensure proper representation in the validation set, 200 viral pneumonia image
 ![Testing Set Distribution](data_visualization/MulticlassTest.png)
 
 #### Validation Set (Total: 24 images)
-**Normal:** 8 images (33.3%)<br/>
-**Bacterial Pneumonia:** 8 images (33.3%)<br/>
-**Viral Pneumonia:** 8 images (33.3%)<br/>
+**Normal:** 200 images (33.3%)<br/>
+**Bacterial Pneumonia:** 200 images (33.3%)<br/>
+**Viral Pneumonia:** 200 images (33.3%)<br/>
 
 ![Validation Set Distribution](data_visualization/MulticlassValid2.png)
 
