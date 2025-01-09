@@ -23,6 +23,53 @@ def plot_pie_chart(labels, sizes, title, pctdistance=0.5, labeldistance=1.4):
     ax.set_title(title, pad=40)
     plt.show()
 
+def create_distribution_charts(data_dict, explode_type):
+    # Data preparation
+    labels = ['Normal', 'Bacterial Pneumonia', 'Viral Pneumonia']
+    # Create color gradients for each category
+    colors = {
+        'train': ['#1a75ff', '#66b3ff', '#99ccff'],  # different blues
+        'test': ['#33cc33', '#70db70', '#99e699'],    # different greens
+        'val': ['#ff66b3', '#ff99cc', '#ffcce6']      # different pinks
+    }
+    
+    # Create figure with subplots
+    fig, ax = plt.subplots(figsize=(10, 8))
+    
+    # Prepare data
+    sizes = []
+    colors_list = []
+    explode = []
+    combined_labels = []
+    
+    for category, category_colors in colors.items():
+        for i, label in enumerate(labels):
+            key = f'{category} {label.lower()}'
+            sizes.append(data_dict[key])
+            colors_list.append(category_colors[i])
+            explode.append(0.05 if category == explode_type else 0)
+    
+    for category in ['Train', 'Test', 'Val']:
+        for label in labels:
+            combined_labels.append(f'{category} {label}')
+    
+    # Create pie chart
+    wedges, texts, autotexts = ax.pie(
+        sizes,
+        explode=explode,
+        labels=combined_labels,
+        colors=colors_list,
+        autopct='%1.2f%%',
+        shadow=True,
+        startangle=90,
+        pctdistance=0.85
+    )
+    
+    # Set title based on which sections are exploded
+    plt.title(f'Restructed Data Distribution')
+    
+    plt.show()
+
 # Dataset values
 ori_dataset_train = 5216
 ori_dataset_test = 624
@@ -58,6 +105,18 @@ datasets = [
     ("Data Distribution of Multiclass Validation Set", ["Normal", "Bacterial\nPneumonia", "Viral\nPneumonia"], [re_categorised_validation_images_normal, re_categorised_validation_images_bacterial_pneumonia, re_categorised_validation_images_viral_pneumonia]),
 ]
 
+data = {
+    'train normal': re_categorised_train_images_normal,
+    'train bacterial pneumonia': re_categorised_train_images_bacterial_pneumonia,
+    'train viral pneumonia': re_categorised_train_images_viral_pneumonia,
+    'test normal': re_categorised_test_images_normal,
+    'test bacterial pneumonia': re_categorised_test_images_bacterial_pneumonia,
+    'test viral pneumonia': re_categorised_test_images_viral_pneumonia,
+    'val normal': re_categorised_validation_images_normal,
+    'val bacterial pneumonia': re_categorised_validation_images_bacterial_pneumonia,
+    'val viral pneumonia': re_categorised_validation_images_viral_pneumonia
+}
+
 # Plot each dataset
 first = True
 for title, labels, sizes in datasets:
@@ -66,3 +125,6 @@ for title, labels, sizes in datasets:
         first = False
     else:
         plot_pie_chart(labels, sizes, title,0.6)
+
+for section in ['train', 'test', 'val']:
+    create_distribution_charts(data, section)
