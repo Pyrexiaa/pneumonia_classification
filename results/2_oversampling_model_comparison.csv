@@ -1,0 +1,5 @@
+Model & Preprocess,Test Accuracy
+DenseNet161 with adaptive_masking_bilateral,66.66666666666666
+EfficientNetB1 with adaptive_masking_gaussian,63.141025641025635
+ResNet50 with adaptive_masking_equalized,69.23076923076923
+VGG16 with gaussian_blur,38.782051282051285
