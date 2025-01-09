@@ -57,6 +57,8 @@ To ensure proper representation in the validation set, 200 viral pneumonia image
 ![Training Set Distribution](data_visualization/TrainTestVal-R.png)
 
 #### Training Set (Total: 4,632 images)
+![Training Set Distribution](data_visualization/Restructed_Explode_Train.png)
+
 **Normal:** 1,149 images (19.62%)<br/>
 **Bacterial Pneumonia:** 2,338 images (39.92%)<br/>
 **Viral Pneumonia:** 1,145 images (19.55%)<br/>
@@ -64,6 +66,8 @@ To ensure proper representation in the validation set, 200 viral pneumonia image
 ![Training Set Distribution](data_visualization/MulticlassTrain2.png)
 
 #### Testing Set (Total: 624 images)
+![Testing Set Distribution](data_visualization/Restructed_Explode_Test.png)
+
 **Normal:** 234 images (4.0%)<br/>
 **Bacterial Pneumonia:** 242 images (4.13%)<br/>
 **Viral Pneumonia:** 148 images (2.53%)<br/>
@@ -71,6 +75,8 @@ To ensure proper representation in the validation set, 200 viral pneumonia image
 ![Testing Set Distribution](data_visualization/MulticlassTest.png)
 
 #### Validation Set (Total: 24 images)
+![Validation Set Distribution](data_visualization/Restructed_Explode_Val.png)
+
 **Normal:** 200 images (3.42%)<br/>
 **Bacterial Pneumonia:** 200 images (3.42%)<br/>
 **Viral Pneumonia:** 200 images (3.42%)<br/>
